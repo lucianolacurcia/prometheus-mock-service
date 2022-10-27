@@ -1,0 +1,73 @@
+---
+metrics:
+  -
+    identifier: "tickets{caja=\"2\", metodo-pago=\"TARJETA\"}"
+    value_cycle:
+      initial_value: 10
+      trends:
+        -
+          repeat: 10
+          step: 1
+          type: "increment"
+        -
+          repeat: 3
+          step: 3
+          type: "decrement"
+        -
+          repeat: 7
+          step: 5
+          type: "increment"
+        -
+          repeat: 20
+          step: 0
+          type: "decrement"
+  -
+    identifier: "tickets{caja=\"1\", metodo-pago=\"TARJETA\"}"
+    value_cycle:
+      initial_value: 10
+      trends:
+        -
+          repeat: 10
+          step: 1
+          type: "increment"
+        -
+          repeat: 3
+          step: 3
+          type: "decrement"
+        -
+          repeat: 7
+          step: 5
+          type: "increment"
+        -
+          repeat: 20
+          step: 0
+          type: "decrement"
+  -
+    identifier: "tickets{caja=\"1\", metodo-pago=\"CASH\"}"
+    value_cycle:
+      initial_value: 10
+      trends:
+        -
+          repeat: 10
+          step: 1
+          type: "increment"
+        -
+          repeat: 3
+          step: 3
+          type: "decrement"
+        -
+          repeat: 7
+          step: 5
+          type: "increment"
+        -
+          repeat: 20
+          step: 0
+          type: "decrement"
+
+status_codes:
+  -
+    code: 200
+    repeat: 100
+  -
+    code: 500
+    repeat: 10
